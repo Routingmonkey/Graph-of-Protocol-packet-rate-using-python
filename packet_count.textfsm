@@ -1,0 +1,12 @@
+Value Filldown DATATIME (.*)
+Value PROTOGRP (\S+)
+Value PKTTYPE (\S+)
+Value REPKT (\d+)
+Value DROPPKT (\d+)
+Value RATEPPS (\d+)
+Value VIOCNT (\d+)
+Value STATE (\S+)
+
+Start
+  ^Fri May  7\s${DATATIME}\sUTC
+  ^${PROTOGRP}\s+${PKTTYPE}\s+${REPKT}\s+${DROPPKT}\s+${RATEPPS}\s+${VIOCNT}\s+${STATE} -> Record
